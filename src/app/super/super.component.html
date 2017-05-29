@@ -1,0 +1,48 @@
+<!--<button (click)="click3()">browse</button>-->
+<br><h3>hey super-admin</h3><br>
+<button (click)="showall()">show all users</button><br>
+<div class="container" *ngFor="let item of data3">
+    <br><br>
+<label>username:</label>{{item.username}}<br>
+<label>password:</label>{{item.password}}<br> 
+<label>types:</label>{{item.types}}<br>
+
+<br>
+</div>
+<!--<br><h5>list of existing people</h5><br>
+<div class="container" *ngFor="let item of data2">
+ 
+   <div *ngIf="flag">
+<img src="{{item.image}}" height="42" width="42">
+
+<br><br>
+<label>username:</label>{{item.username}}<br>
+<label>password:</label>{{item.password}}<br> 
+<label>types:</label>{{item.types}}<br>
+
+<br>
+</div>-->
+
+
+
+<br><br><br> you can edit users designation down below<br><br><br>
+<form  #f1="ngForm" (ngSubmit)="onclick3(f1)">  
+
+<label><b>username</b></label>
+    <input type="text" placeholder="Enter Username" [(ngModel)]="user" name="username" #username="ngModel" required >
+<label><b>Types</b></label>
+    <input  placeholder="Enter types" [(ngModel)]="type" name="types" #types="ngModel" required>
+<button (click)="onclick3()">submit</button>
+<form  #f2="ngForm" (ngSubmit)="onclick4(f2)">
+
+
+<br><br><br> you can delete people down below<br><br><br>
+
+<label><b>username</b></label>
+    <input type="text" placeholder="Enter Username" [(ngModel)]="user" name="username" #username="ngModel" required >
+<button (click)="onclick4()">delete</button>
+
+</form>
+</form>
+<br><br>
+<button (click)="click3()">click here to browse seasons,series,comics</button>
